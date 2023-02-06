@@ -1,0 +1,58 @@
+{
+    "type": "object",
+    "properties": {
+        "transactionId": {
+            "type": "string",
+            "format": "uuid",
+            "exampleSetFlag": false,
+            "types": [
+                "string"
+            ]
+        },
+        "customerId": {
+            "type": "string",
+            "format": "uuid",
+            "exampleSetFlag": false,
+            "types": [
+                "string"
+            ]
+        },
+        "totalPaidAmount": {
+            "type": "number",
+            "format": "double",
+            "exampleSetFlag": false,
+            "types": [
+                "number"
+            ]
+        },
+        "itemList": {
+            "type": "object",
+            "additionalProperties": {
+                "type": "integer",
+                "format": "int32",
+                "exampleSetFlag": false,
+                "types": [
+                    "integer"
+                ]
+            },
+            "exampleSetFlag": false,
+            "types": [
+                "object"
+            ],
+            "jsonSchema": {
+                "type": "object"
+            }
+        }
+    },
+    "example": {
+        "transactionId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "customerId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "totalPaidAmount": 1.100000023841858,
+        "itemList": {
+            "additionalProp1": 0,
+            "additionalProp2": 0,
+            "additionalProp3": 0
+        }
+    },
+    "exampleSetFlag": true
+}

@@ -1,0 +1,10 @@
+/async-catalog/.next/
+/async-catalog/.eventcatalog-core/
+/async-catalog/node_modules/
+/async-catalog/package-lock.json
+/async-catalog/out/
+/async-catalog/refactor/node_modules/
+/async-catalog/refactor/package-lock.json
+
+
+/.idea/

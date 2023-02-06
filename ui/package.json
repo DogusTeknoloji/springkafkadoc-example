@@ -1,0 +1,27 @@
+{
+  "name": "springkafkadoc",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "eventcatalog start",
+    "get-yamls": "node ./async-api-yml-creator/index.js",
+    "dev": "eventcatalog generate && eventcatalog dev",
+    "build": "eventcatalog build",
+    "generate": "eventcatalog generate",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@eventcatalog/types": "0.4.0",
+    "@types/node": "18.11.18",
+    "@types/react": "18.0.27",
+    "autoprefixer": "10.4.5",
+    "cross-env": "^7.0.3",
+    "postcss": "^8.3.11",
+    "tailwindcss": "^2.2.19",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "@eventcatalog/core": "0.6.4",
+    "@eventcatalog/plugin-doc-generator-asyncapi": "^0.3.3"
+  }
+}

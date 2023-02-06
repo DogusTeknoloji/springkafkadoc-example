@@ -1,0 +1,65 @@
+asyncapi: "2.0.0"
+info:
+  title: "Stock"
+  version: "1.0.0"
+  description: "Nice, short desc"
+servers:
+  kafka:
+    url: "ip-of-service:port"
+    protocol: "kafka"
+channels:
+  registerQuantityDecrease_publish:
+    publish:
+      operationId: "registerQuantityDecrease_publish_receive"
+      description: "Auto-generated description"
+      bindings:
+        kafka:
+          groupId:
+            type: "string"
+            enum:
+            - "stock"
+      message:
+        name: "RegisterQuantityDecreaseEvent"
+        title: "RegisterQuantityDecreaseEvent"
+        payload:
+          $ref: "#/components/schemas/RegisterQuantityDecreaseEvent"
+        headers:
+          $ref: "#/components/schemas/HeadersNotDocumented"
+    bindings:
+      kafka: {}
+components:
+  schemas:
+    RegisterQuantityDecreaseEvent:
+      type: "object"
+      properties:
+        itemId:
+          type: "string"
+          format: "uuid"
+          exampleSetFlag: false
+          types:
+          - "string"
+        transactionId:
+          type: "string"
+          format: "uuid"
+          exampleSetFlag: false
+          types:
+          - "string"
+        amount:
+          type: "integer"
+          format: "int32"
+          exampleSetFlag: false
+          types:
+          - "integer"
+      example:
+        itemId: "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+        transactionId: "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+        amount: 0
+      exampleSetFlag: true
+    HeadersNotDocumented:
+      type: "object"
+      properties: {}
+      example: {}
+      exampleSetFlag: true
+      types:
+      - "object"
+tags: []
