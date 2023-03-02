@@ -18,14 +18,15 @@ npx @eventcatalog/create-eventcatalog@latest [name]
 ```
 2. Install the plugin for generating documents:
 
-```
+``` shell
 npm install --save @eventcatalog/plugin-doc-generator-asyncapi
 ```
 
 Once you've downloaded [demo project](https://www.eventcatalog.dev/docs/installation) from event-catalog, we will create a node project inside it. 
 
 3. Create a Node.js project within the demo project and make HTTP calls to the endpoints created by Spring Kafka Doc. The responses should be saved as YAML files:
-```
+
+``` javascript
 import fs from "fs";
 import axios from "axios";
 
@@ -65,7 +66,7 @@ You can follow the event-catalog's tutorial for this.
 
 4. Use the Event Catalog doc generator plugin to generate markdown files for visualization. Add the following code in the eventcatalog.config.js file:
 
-```
+``` javascript
 const urls = [
   "http://localhost:8080",
   "http://localhost:8081",
@@ -92,7 +93,8 @@ Note: You can adjust the file hierarchy to your preference.
 
 
 Modify the npm commands in your package.json file to ease the running process:
-```
+
+``` javascript
 "scripts": {
     "start": "eventcatalog start",
     "get-yamls": "node ./async-api-yml-creator/index.js",
