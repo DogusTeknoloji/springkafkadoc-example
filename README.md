@@ -33,7 +33,7 @@ import axios from "axios";
 clearDir("./services")
 clearDir("./events")
 clearDir(".domains")
-clearDir("./asyncapifiles")
+clearDir("./async-api-files")
 
 const urls = [
   "http://localhost:8080",
